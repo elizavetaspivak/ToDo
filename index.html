@@ -5,10 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo лист</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 </head>
 <body>
-    
-
+    <div class="container">
+		<h1>To-Do List</h1>
+		<header class="main-header">
+			<input type="text" placeholder="Ваша задача..." id="example">
+			<p class="addBtn" onclick="newElement()">Добавить</p>
+		</header>
+		<ul class="todo" id="todo">
+			<li>Помыть посуду</li>
+		</ul>
+	</div>	
 
     <script src="script.js"></script>
 </body>
