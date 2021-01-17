@@ -1,3 +1,15 @@
+let list = document.querySelector('ul');
+let todos;
+
+function toLocal(){
+    todos = list.innerHTML;
+    localStorage.setItem('todos',todos);
+}
+
+if(localStorage.getItem('todos')){
+    list.innerHTML = localStorage.getItem('todos');
+}
+
 function newElement() {
     //создаем li
     let li = document.createElement('li');
@@ -10,11 +22,10 @@ function newElement() {
     li.appendChild(t);
     // кладем наше li со значением в конец нашего списка
     document.getElementById('todo').appendChild(li);
-
+    toLocal();
     // чистим поле input после ввода значения
     document.getElementById('example').value = ''
 }
-
 
 
 
